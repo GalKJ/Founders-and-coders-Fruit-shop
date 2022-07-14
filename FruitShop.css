@@ -1,3 +1,37 @@
+html {
+    font-size: var(--fs);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: var(--letter-spacing);
+  }
+
+body {
+  max-width: 90vw;
+  margin: auto;
+  background-color: hsla(160, 3%, 88%, 0.53);
+}
+
 .fruits {
     width: 300px;
 }
+
+.items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.item-img img {
+    width: 300px;
+}
+
+.basket-button {
+    display: flex;
+    justify-content: center;
+}
+
