@@ -1,1 +1,2 @@
-console.log('Rabbitz');
+//Select Elements
+const productEl = document.querySelector(".products");
