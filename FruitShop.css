@@ -36,3 +36,37 @@ body {
     justify-content: center;
 }
 
+/* Basket */
+
+.basket-container {
+    /* display: flex; */
+    
+    background-color: white;
+    margin-top: 5rem;
+}
+
+.fb-header {
+    display: flex;
+    justify-content: center
+}
+
+.h2-header {
+    display: flex;
+    /* flex-flow: column wrap; */
+    justify-content: space-evenly;
+}
+
+.item-row-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.banana-section {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.counter-section {
+    display: flex;
+}
+

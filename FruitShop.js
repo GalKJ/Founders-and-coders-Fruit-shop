@@ -10,15 +10,17 @@ let userBasket = {
 // Select elements 
 const basketButton = document.querySelectorAll(".basket-button button");
 
-// Function to run when event handler fires when basket button in clicked
+// Function to run when event handler fires when add to basket button in clicked
 
-function logTarget(e) {
-    console.log(e.target.dataset.fruit);
+function updateBasket(e) {
+    let value = e.target.dataset.fruit;
+
+    userBasket[value]++;
 }
 
 // Function to add event listener to add to basket buttons on fruit cards 
 function addEventListenerBasket(button) {
-    button.addEventListener('click', logTarget)
+    button.addEventListener('click', updateBasket)
 }
 
 // Add event listener on basket buttons 
