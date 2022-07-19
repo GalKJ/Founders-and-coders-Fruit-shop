@@ -25,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
+    max-width: 300px;
 }
 
 .item-img img {
@@ -36,37 +37,178 @@ body {
     justify-content: center;
 }
 
-/* Basket */
 
-.basket-container {
-    /* display: flex; */
+/* Fruit basket grid below */
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "head head head head" 
+                         "items units units units" 
+                         "fruit0 minus0 count0 plus0"
+                         "fruit1 minus1 count1 plus1"
+                         "fruit2 minus2 count2 plus2"
+                         "fruit3 minus3 count3 plus3";
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     
+    /* Further styles */
     background-color: white;
-    margin-top: 5rem;
+    max-width: fit-content;
 }
 
-.fb-header {
-    display: flex;
-    justify-content: center
+#f-head {
+    grid-area: head;
+    justify-self: center;
 }
 
-.h2-header {
-    display: flex;
-    /* flex-flow: column wrap; */
-    justify-content: space-evenly;
+#items {
+    grid-area: items;
+    justify-self: center;
+    align-self: center;
 }
 
-.item-row-section {
-    display: flex;
-    justify-content: space-evenly;
+#units {
+    grid-area: units;
+    justify-self: center;
+    align-self: center;
 }
 
-.banana-section {
-    display: flex;
-    /* justify-content: space-evenly; */
+/* Banana */
+#ban-fruit0 {
+    grid-area: fruit0;
+    justify-self: center;
+    align-self: center;
 }
 
-.counter-section {
-    display: flex;
+#ban-minus0 {
+    grid-area: count0;
+    max-width: fit-content;
+    justify-self: start;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%
 }
 
+#ban-count0 {
+    grid-area: count0;
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+#ban-plus0 {
+    grid-area: count0;
+    max-width: fit-content;
+    justify-self: end;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%;
+}
+
+/* Berries */
+#ban-fruit1 {
+    grid-area: fruit1;
+    justify-self: center;
+    align-self: center;
+}
+
+#ban-minus1 {
+    grid-area: count1;
+    max-width: fit-content;
+    justify-self: start;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%
+}
+
+#ban-count1 {
+    grid-area: count1;
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+#ban-plus1 {
+    grid-area: count1;
+    max-width: fit-content;
+    justify-self: end;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%;
+}
+
+/* Grapes */
+#ban-fruit2 {
+    grid-area: fruit2;
+    justify-self: center;
+    align-self: center;
+}
+
+#ban-minus2 {
+    grid-area: count2;
+    max-width: fit-content;
+    justify-self: start;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%
+}
+
+#ban-count2 {
+    grid-area: count2;
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+#ban-plus2 {
+    grid-area: count2;
+    max-width: fit-content;
+    justify-self: end;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%;
+}
+
+/* Watermelon */
+#ban-fruit3 {
+    grid-area: fruit3;
+    justify-self: center;
+    align-self: center;
+}
+
+#ban-minus3 {
+    grid-area: count3;
+    max-width: fit-content;
+    justify-self: start;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%
+}
+
+#ban-count3 {
+    grid-area: count3;
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+#ban-plus3 {
+    grid-area: count3;
+    max-width: fit-content;
+    justify-self: end;
+    align-self: center;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25%;
+}
