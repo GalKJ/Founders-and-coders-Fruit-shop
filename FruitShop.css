@@ -10,6 +10,29 @@ body {
   background-color: hsla(160, 3%, 88%, 0.53);
 }
 
+/* Button rules */
+
+button {
+    transition: all 1s ease;
+    border: none;
+    border-radius: 25%;
+}
+
+button:hover {
+    background-color: black;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}
+
+/* Main */
+
+#title-header {
+    text-align: center;
+    padding: 2%;
+}
+
 .fruits {
     width: 300px;
 }
@@ -37,6 +60,12 @@ body {
     justify-content: center;
 }
 
+.empty-fruit-button {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
 
 /* Fruit basket grid below */
 
@@ -47,13 +76,17 @@ body {
                          "fruit0 minus0 count0 plus0"
                          "fruit1 minus1 count1 plus1"
                          "fruit2 minus2 count2 plus2"
-                         "fruit3 minus3 count3 plus3";
+                         "fruit3 minus3 count3 plus3"
+                         "emptyl clearl clearr emptyr";
     grid-template-columns: 3fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     
     /* Further styles */
-    background-color: white;
-    max-width: fit-content;
+    background-color: rgb(172, 152, 215);
+    width: 300px;
+    min-width: fit-content;
+    margin: 2rem auto auto auto;
+    
 }
 
 #f-head {
@@ -81,9 +114,9 @@ body {
 }
 
 #ban-minus0 {
-    grid-area: count0;
+    grid-area: minus0;
     max-width: fit-content;
-    justify-self: start;
+    justify-self: end;
     align-self: center;
     font-size: 1.1rem;
     border: none;
@@ -99,13 +132,14 @@ body {
 }
 
 #ban-plus0 {
-    grid-area: count0;
+    grid-area: plus0;
     max-width: fit-content;
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     font-size: 1.1rem;
     border: none;
     border-radius: 25%;
+    
 }
 
 /* Berries */
@@ -116,9 +150,9 @@ body {
 }
 
 #ban-minus1 {
-    grid-area: count1;
+    grid-area: minus1;
     max-width: fit-content;
-    justify-self: start;
+    justify-self: end;
     align-self: center;
     font-size: 1.1rem;
     border: none;
@@ -134,9 +168,9 @@ body {
 }
 
 #ban-plus1 {
-    grid-area: count1;
+    grid-area: plus1;
     max-width: fit-content;
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     font-size: 1.1rem;
     border: none;
@@ -151,9 +185,9 @@ body {
 }
 
 #ban-minus2 {
-    grid-area: count2;
+    grid-area: minus2;
     max-width: fit-content;
-    justify-self: start;
+    justify-self: end;
     align-self: center;
     font-size: 1.1rem;
     border: none;
@@ -169,9 +203,9 @@ body {
 }
 
 #ban-plus2 {
-    grid-area: count2;
+    grid-area: plus2;
     max-width: fit-content;
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     font-size: 1.1rem;
     border: none;
@@ -186,9 +220,9 @@ body {
 }
 
 #ban-minus3 {
-    grid-area: count3;
+    grid-area: minus3;
     max-width: fit-content;
-    justify-self: start;
+    justify-self: end;
     align-self: center;
     font-size: 1.1rem;
     border: none;
@@ -204,11 +238,29 @@ body {
 }
 
 #ban-plus3 {
-    grid-area: count3;
+    grid-area: plus3;
     max-width: fit-content;
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     font-size: 1.1rem;
     border: none;
     border-radius: 25%;
+}
+
+/* Total fruits counter */
+
+#total-fruits {
+    grid-area: emptyl;
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Empty basket button */
+
+#empty-basket {
+    grid-area: clearr;
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
 }
