@@ -26,7 +26,7 @@
           <button data-fruit="banana">Add to basket</button>
         </div>
         <div class="empty-fruit-button">
-          <button>Empty Bananas</button>
+          <button data-fruit="banana" data-empty="empty">Empty Bananas</button>
         </div>
       </div>
 
@@ -43,7 +43,7 @@
           <button data-fruit="berries">Add to basket</button>
         </div>
         <div class="empty-fruit-button">
-          <button>Empty Berries</button>
+          <button data-fruit="berries" data-empty="empty">Empty Berries</button>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
           <button data-fruit="grapes">Add to basket</button>
         </div>
         <div class="empty-fruit-button">
-          <button>Empty Grapes</button>
+          <button data-fruit="grapes" data-empty="empty">Empty Grapes</button>
         </div>
       </div>
 
@@ -77,7 +77,9 @@
           <button data-fruit="watermelon">Add to basket</button>
         </div>
         <div class="empty-fruit-button">
-          <button>Empty Watermelons</button>
+          <button data-fruit="watermelon" data-empty="empty">
+            Empty Watermelons
+          </button>
         </div>
       </div>
     </div>
@@ -90,28 +92,67 @@
       <h3 id="units">Units</h3>
 
       <p id="ban-fruit0">Banana</p>
-      <button id="ban-minus0">-</button>
+      <button
+        data-fruit="banana"
+        data-check="-"
+        class="basket-minus"
+        id="ban-minus0"
+      >
+        -
+      </button>
       <p id="ban-count0">0</p>
-      <button id="ban-plus0">+</button>
+      <button data-fruit="banana" class="basket-plus" id="ban-plus0">+</button>
 
       <p id="ban-fruit1">Berries</p>
-      <button id="ban-minus1">-</button>
+      <button
+        data-fruit="berries"
+        data-check="-"
+        class="basket-minus"
+        id="ban-minus1"
+      >
+        -
+      </button>
       <p id="ban-count1">0</p>
-      <button id="ban-plus1">+</button>
+      <button data-fruit="berries" class="basket-plus" id="ban-plus1">+</button>
 
       <p id="ban-fruit2">Grapes</p>
-      <button id="ban-minus2">-</button>
+      <button
+        data-fruit="grapes"
+        data-check="-"
+        class="basket-minus"
+        id="ban-minus2"
+      >
+        -
+      </button>
       <p id="ban-count2">0</p>
-      <button id="ban-plus2">+</button>
+      <button data-fruit="grapes" class="basket-plus" id="ban-plus2">+</button>
 
       <p id="ban-fruit3">Watermelon</p>
-      <button id="ban-minus3">-</button>
+      <button
+        data-fruit="watermelon"
+        data-check="-"
+        class="basket-minus"
+        id="ban-minus3"
+      >
+        -
+      </button>
       <p id="ban-count3">0</p>
-      <button id="ban-plus3">+</button>
+      <button data-fruit="watermelon" class="basket-plus" id="ban-plus3">
+        +
+      </button>
 
       <p id="total-fruits">Total fruits : 0</p>
 
-      <button id="empty-basket">Empty Basket</button>
+      <button
+        data-fruit0="banana"
+        data-fruit1="berries"
+        data-fruit2="grapes"
+        data-fruit3="watermelon"
+        data-basketempty="emptybasket"
+        id="empty-basket"
+      >
+        Empty Basket
+      </button>
     </div>
 
     <div>
