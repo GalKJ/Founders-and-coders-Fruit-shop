@@ -6,15 +6,20 @@ let userBasket = {
     grapes: 0,
     watermelon: 0,
     };
-    
+
+// Declare these variables to update later
+let values;
+let keys;
+
 // Select elements 
 const basketButton = document.querySelectorAll(".basket-button button");
 const basketPlus = document.querySelectorAll(".basket-plus");
 const basketMinus = document.querySelectorAll(".basket-minus");
 const basketFruitEmpty = document.querySelectorAll(".empty-fruit-button button");
 const emptyEntireBasket = document.querySelector("#empty-basket");
-// Function to run when event handler fires when add to basket buttons are clicked
 
+
+// Function to run when event handler fires when add to basket buttons are clicked
 function updateBasket(e) {
     let value = e.target.dataset.fruit;
     let value0 = e.target.dataset.fruit0;
@@ -24,7 +29,7 @@ function updateBasket(e) {
     let checkDataSet = e.target.dataset.check;
     let emptyDataSet = e.target.dataset.empty;
     let basketEmpty = e.target.dataset.basketempty;
-
+    
     if (checkDataSet) {
         userBasket[value]--;
     }  else if (emptyDataSet) {
@@ -38,6 +43,15 @@ function updateBasket(e) {
         userBasket[value]++;
     }
 
+    values = Object.values(userBasket);
+    keys = Object.keys(userBasket);
+
+    console.log(userBasket);
+    console.log(values);
+    console.log(keys);
+
+    return userBasket;
+    
     
 }
 
@@ -54,6 +68,8 @@ basketFruitEmpty.forEach(addEventListenerBasket);
 
 // Add event listener on empty basket button and call updateBasket function
 emptyEntireBasket.addEventListener('click', updateBasket);
+
+
 
 
 
