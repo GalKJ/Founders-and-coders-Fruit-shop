@@ -7,17 +7,29 @@ let userBasket = {
     watermelon: 0,
     };
 
-// Declare these variables to update later
+// Declare these variables to update later with Object methods
 let values;
 let keys;
 
-// Select elements 
+// Declare these variables to update later with .innerHTML
+let bananaCount;
+
+// Select buttons 
 const basketButton = document.querySelectorAll(".basket-button button");
 const basketPlus = document.querySelectorAll(".basket-plus");
 const basketMinus = document.querySelectorAll(".basket-minus");
 const basketFruitEmpty = document.querySelectorAll(".empty-fruit-button button");
 const emptyEntireBasket = document.querySelector("#empty-basket");
 
+
+// Select elements to update from let values
+
+let bananaCounter = document.querySelectorAll(".fruit-counter");
+let banCount = document.getElementById("ban-count0");
+let berriesCount = document.getElementById("ban-count1");
+let grapesCount = document.getElementById("ban-count2");
+let watermelonCount = document.getElementById("ban-count3");
+let totalBasketCount = document.getElementById("total-fruits");
 
 // Function to run when event handler fires when add to basket buttons are clicked
 function updateBasket(e) {
@@ -49,6 +61,57 @@ function updateBasket(e) {
     console.log(userBasket);
     console.log(values);
     console.log(keys);
+    
+    const banCountVal = values[0];
+    banCount.innerHTML = `
+            <p>${banCountVal}</p>
+            `;
+
+    const berriesCountVal = values[1];
+    berriesCount.innerHTML = `
+                    <p>${berriesCountVal}</p>
+                    `;
+            
+    const grapesCountVal = values[2];
+    grapesCount.innerHTML = `
+                    <p>${grapesCountVal}</p>
+                    `;
+                    
+    const watermelonCountVal = values[3];
+    watermelonCount.innerHTML = `
+                    <p>${watermelonCountVal}</p>
+                    `;
+
+    function tallyValues (tally, currentTotal) {
+        console.log(`the current tally is ${tally}`);
+        console.log(`the current total is ${currentTotal}`);
+        console.log('----------');
+        return tally + currentTotal;
+    }
+        
+    const basketTotal = values.reduce(tallyValues, 0);
+
+    totalBasketCount.innerHTML = `
+    <p>Total Fruits: ${basketTotal}</p>
+    `;
+
+    
+
+    
+    // for (let index = 0; index < values.length; index++) {
+    //     const element = values[index];
+        
+    //     console.log(element);
+        
+    //     bananaCount = `
+    //     <p>${element}</p>
+    //     `; 
+
+    //     console.log(bananaCount);
+        
+       
+    // }
+    
 
     return userBasket;
     
@@ -70,6 +133,13 @@ basketFruitEmpty.forEach(addEventListenerBasket);
 emptyEntireBasket.addEventListener('click', updateBasket);
 
 
+// Inject inner html into fruit counters 
 
+
+// bananaCount = `
+// <p></p>
+// `; 
+
+// bananaCounter.innerHTML = bananaCount;
 
 
