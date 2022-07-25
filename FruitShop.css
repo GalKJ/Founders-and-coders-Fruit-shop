@@ -1,3 +1,9 @@
+:root {
+    --letter-spacing: 0.1rem;
+    /* The default text size in browsers is 16px. So, the default size of 1rem is 16px. */
+    --fs: 1rem;
+    }
+
 html {
     font-size: var(--fs);
     font-family: Arial, Helvetica, sans-serif;
@@ -20,13 +26,13 @@ button {
 
 button:hover {
     background-color: black;
-  color: white;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.5s ease-in-out;
 }
 
-/* Main */
+/* Header & cards */
 
 #title-header {
     text-align: center;
@@ -55,6 +61,16 @@ button:hover {
     width: 300px;
 }
 
+.item-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-desc p, h2 {
+    align-self: center;
+    justify-self: center;
+}
+
 .basket-button {
     display: flex;
     justify-content: center;
@@ -67,7 +83,7 @@ button:hover {
 }
 
 
-/* Fruit basket grid below */
+/* Fruit basket grid */
 
 .grid-container {
     display: grid;
@@ -81,11 +97,12 @@ button:hover {
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     
-    /* Further styles */
+    /* Further basket styles */
     background-color: rgb(172, 152, 215);
     width: 300px;
+    height: 585px;
     min-width: fit-content;
-    margin: 2rem auto auto auto;
+    margin: 2rem auto 2rem auto;
     
 }
 
